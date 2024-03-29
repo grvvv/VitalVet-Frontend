@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:5959",
+  "proxy": "https://vitalvet-backend.vercel.app",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,

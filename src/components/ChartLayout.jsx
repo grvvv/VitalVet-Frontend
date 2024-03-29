@@ -2,12 +2,6 @@ import React from 'react'
 import LineChart from './LineChart';
 import Loader from './alerts/Loader';
 
-function getRandomInt(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-}
-
 const ChartLayout = (props) => {
   const chartType = props.type;
   const dataArray = props.data;
