@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --primary: #28b67e;
+  --secondary: #1d4c4f;
+  --text-primary:  #ece9e9;
+  --text-secondary: #d3dcde;
+  --error-background: #e7195a;
+  --error-text: #fcd4d4;
+}
+
+
+.home {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 1.3fr 1fr;
+  grid-template-rows: max-content 30%;
+  gap: 2%;
+}
+.cattles{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: fit-content;
+}
+.details-component{
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin: 20px 0;
+  transition: transform 0.3s ease-in-out;
+}
+.Healthy{
+  background-color: #e3fff4;
+  border: solid #41a07a;
+}
+.Moderate{
+  background-color: rgb(255, 234, 195);
+  border: solid rgb(255, 195, 85);
+}
+.Weak{
+  background-color: #ffa5a5;
+}
+.details-component:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.link-component{
+  width: 100%;
+}
+.buttons-component{
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-left: none;
+}
+.buttons-component button{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.cattle-details {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.cattle-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+  color: var(--primary);
+}
+
+.cattle-details p {
+  margin: 0;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+/* Add Cattle Form */
+.form-page{
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  background-color: white;
+  width: 45%;
+  padding: 10px 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+label, input {
+  display: block;
+  font-size: 1.05em;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.readonly{
+  background-color: #d6d6d6;
+}
+form button{
+  background: var(--primary);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+p span{
+  margin-bottom: 10px;
+}
+
+.radio-first{
+  margin-top: 10px;
+}
+
+.radio-container{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: "Poppins";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: var(--primary);
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error-text);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error-text);
+}
+
+/* Empty Container */
+.empty-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  color: #666666;
+}
+.empty-container .material-symbols-outlined{
+  font-size: 3em;
+}
+.empty-container h3{
+  margin-top: -30px;
+  display: flex;
+  align-items: center;
+}
+.empty-container img{
+  margin-left: 10px;
+  padding-top: 5px;
+  width: 100px;
+}
+
+/* Status Card */
+.status-card{
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: fit-content;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.status-title{
+  margin-bottom: -20px;
+}
+.status-title *{
+  margin-left: 20px;
+}
+.status-title span{
+  font-size: xx-large;
+}
+.status-title h1{
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-bottom: -10px;
+  color: var(--primary);
+}
+.status-chart{
+  display: flex;
+  justify-content: center;
+}
+
+.sensor-status .status-title h1{
+  color: #ffb24e;
+}
+.status-description{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.status-description h3{
+  color: #666666;
+  font-size: larger;
+  padding-left: 20px;
+}
+.status-description span{
+  display: block;
+  color: black;
+  font-size: larger;
+}
+
+/* News Container */
+.news-component{
+  display: flex;
+  background-color: whitesmoke;
+  height: 3em;
+  align-items: center;
+  margin-top: 5px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font: bold 1.8em 'Poppins';
+  color: rgb(0, 55, 138);
+  grid-row-start: 2;
+  grid-row-end: 3;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.news-component:hover{
+  transform: scale(1.04);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.news-component span{
+  font-size: xx-large;
+}
+/* NewsComponent.css */
+.news-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: whitesmoke; /* Add whitesmoke background */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+.news-title {
+  font-size: 1.6em;
+  margin-bottom: 20px; /* Add margin bottom for spacing */
+}
+.news-list {
+  list-style-type: none;
+  padding: 0;
+}
+.news-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc; /* Add border bottom for separation */
+  padding-bottom: 20px; /* Add padding bottom for spacing */
+}
+.news-content {
+  display: flex;
+}
+.news-image {
+  width: 30%; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add margin for spacing */
+  border-radius: 5px; /* Add border radius */
+}
+.news-text {
+  flex: 1; /* Expand to fill remaining space */
+}
+.news-heading {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #333; /* Add color for contrast */
+}
+.news-description {
+  font-size: 16px;
+  color: #555; /* Add color for contrast */
+}
+.news-link {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+}
+.news-link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px){
+  .home{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+  }
+  .news-container{
+    width: auto;
+    margin: 0px 15px;
+  }
+  .news-content{
+    flex-direction: column;
+  }
+  .news-image{
+    width: auto;
+  }
+  form{
+    width: 70%;
+  }
+}

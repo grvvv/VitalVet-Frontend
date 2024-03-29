@@ -1,0 +1,166 @@
+:root {
+  --primary: #28b67e;
+  --secondary: #1d4c4f;
+  --text-primary:  #ece9e9;
+  --text-secondary: #d3dcde;
+  --error-background: #e7195a;
+  --error-text: #fcd4d4;
+}
+
+.health-page{
+  display: grid;
+  grid-template-columns: 70% 25%;
+  grid-template-rows: 27% 20% 20%;
+  gap: 3%;
+}
+
+.data-charts{
+  position: relative; 
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.data-charts div{
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+/* Gauges CSS */
+.data-gauges{
+  position: relative; 
+  height: auto;
+  border-radius: 30px;
+  display: flex;
+  margin-bottom: 10px;
+  background: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 20px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.data-gauges > * {
+  width: 33.3%;
+}
+.data-gauges span{
+  font: bold 23px "Poppins";
+  color: rgb(57, 57, 57);
+}
+.data-gauges .gauge-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+.gauge-chart{
+  width: 150px;
+  height: 150px;
+}
+.gauge-values{
+  font: bold 18px "Poppins";
+  color: rgb(99, 99, 99);
+}
+.gauge-values span{
+  font: bolder 22px "Poppins";
+  color: var(--primary);
+}
+
+/* Card Component */
+.card-component{
+  background: whitesmoke;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: fit-content;
+}
+#name{
+  color: var(--primary);
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card-component span{
+  font: 1em "Poppins";
+}
+.card-component p{
+  font: bold 1.2em "Poppins";
+  display: inline;
+}
+.card-details span{
+  display: block;
+  
+}
+
+/* Select */
+select{
+  width: max-content;
+  height: 40px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  font: bold 1em "Poppins";
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+select:focus{
+  outline: none;
+}
+.custom-select{
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 950px){
+  .health-page{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .data-gauges {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-radius: 15px;
+    width: auto;
+    margin: 0px 15px;
+    padding: 0px 20px;
+  }
+  .data-gauges .gauge-container{
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-component{
+    background: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    width: auto;
+    margin: 0px 15px;
+    padding: 20px 30px;
+  }
+  .custom-select select{
+    margin: 10px 15px;
+  }
+  
+  #current-cattle-id{
+    font-size: 1.2em;
+  }
+
+  .data-charts{
+    width: auto;
+    margin: 0px 15px;
+  }
+}

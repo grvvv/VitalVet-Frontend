@@ -1,0 +1,105 @@
+:root {
+  --primary: #28b67e;
+  --secondary: #1d4c4f;
+  --text-primary:  #ece9e9;
+  --text-secondary: #d3dcde;
+  --error-background: #e7195a;
+  --error-text: #fcd4d4;
+}
+
+/* Delete Alert */
+
+.custom-alert-overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-dialog {
+  background-color: white;
+  font-size: 1.4em;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-dialog button {
+  font-size: 0.9em;
+  padding: 10px 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.confirmation-dialog button:hover{
+  box-shadow: 0 2px 10px black;
+}
+
+.confirmation-dialog #yes{
+  background: var(--error-background);
+  color: var(--error-text);
+  border: none;
+  border-radius: 5px;
+}
+.confirmation-dialog #no{
+  background: rgb(227, 227, 227);
+  color: rgb(53, 53, 53);
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* Loader */
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loading img {
+  width: 20%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px; /* Add spacing between logo and loading text */
+  margin-top: 20%;
+}
+
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: var(--primary);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .loading img{
+    width: 50%;
+    margin-top: 40vh;
+  }
+
+  .confirmation-dialog {
+    background-color: white;
+    font-size: 1.2em;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+
+}

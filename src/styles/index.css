@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --primary: #28b67e;
+  --secondary: #1d4c4f;
+  --text-primary:  #ece9e9;
+  --text-secondary: #d3dcde;
+  --error-background: #e7195a;
+  --error-text: #fcd4d4;
+}
+  
+body {
+  background: #ececec;
+  margin: 0;
+  font-family: "Poppins";
+  overflow: 'hidden'
+}
+
+header{
+  background: var(--secondary);
+  padding: 20px 0px;
+  border-bottom: 2px solid black;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+header a {
+  margin-left: 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.pages{
+  max-width: 1400px;
+  padding: 0;
+  margin: 20px auto;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+#logo-image{
+  width: 150px;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+nav button{
+  background-color: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+}
+.nav-right-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.create-button {
+  background: var(--primary);
+  color: #fff;
+}
+#logout-button{
+  color: var(--error-text);
+  background: var(--error-background);
+  border: 2px solid var(--error-background);
+}
+.nav-right-div span{
+  margin-right: -9px;
+}
+
+/* auth forms */
+.login-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+form.signup, form.login{
+  border: 2px solid black;
+  max-width: 400px;
+  margin-top: -250px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 650px) {
+  #user-mail{
+    display: none;
+  }
+  .pages{
+    margin-top: 20px;
+    padding: 0;
+  }
+}
