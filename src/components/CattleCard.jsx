@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAuthContext } from '../hooks/useAuthContext'
 import Loader from './alerts/Loader';
+import API_BASE_URL from '../apiConfig';
 
 const CattleCard = (props) => {
   const [entityData, setEntityData] = useState(null);
@@ -10,7 +11,7 @@ const CattleCard = (props) => {
   useEffect(() => {
     const fetchCattle = async function() {
     try {
-      const response = await fetch(`/api/cattles/${props.currentCattle}`, {
+      const response = await fetch(`${API_BASE_URL}/api/cattles/${props.currentCattle}`, {
       headers: {
         'Authorization': `Bearer ${user.token}`
       }

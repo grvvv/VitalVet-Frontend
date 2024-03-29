@@ -5,6 +5,7 @@ import ChartLayout from '../components/ChartLayout';
 import CattleCard from '../components/CattleCard';
 import { useAuthContext } from "../hooks/useAuthContext";
 import Loader from '../components/alerts/Loader';
+import API_BASE_URL from '../apiConfig';
 
 function Health() {
   const location = useLocation();
@@ -27,7 +28,7 @@ function Health() {
   
   const fetchHealthParam = async function() {
     try {
-      const response = await fetch(`/api/sensordata/get/${tagNumber}`, {
+      const response = await fetch(`${API_BASE_URL}/api/sensordata/get/${tagNumber}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

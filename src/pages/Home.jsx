@@ -10,6 +10,9 @@ import StatusCard from "../components/cards/StatusCard";
 import SensorStatus from "../components/cards/SensorStatus";
 import { Link } from "react-router-dom";
 
+// api
+import API_BASE_URL from "../apiConfig";
+
 function Home() {
   const {cattles, dispatch} = useCattleContext()
   const { user } = useAuthContext()
@@ -17,7 +20,7 @@ function Home() {
   useEffect(() => {
     const fetchCattles = async function() {
       try {
-        const response = await fetch('/api/cattles', {
+        const response = await fetch(`${API_BASE_URL}/api/cattles`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

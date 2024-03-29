@@ -7,6 +7,7 @@ import { useState } from "react"
 
 // component
 import ConfirmationDialog from "./alerts/ConfirmationDialog"
+import API_BASE_URL from "../apiConfig"
 
 export const CattleDetails = function({ cattle }){
   const { dispatch } = useCattleContext()
@@ -42,7 +43,7 @@ export const CattleDetails = function({ cattle }){
       if (!user){
         return
       }
-      const response = await fetch('/api/cattles/' + cattle._id, {
+      const response = await fetch(`${API_BASE_URL}/api/cattles/` + cattle._id, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${user.token}`

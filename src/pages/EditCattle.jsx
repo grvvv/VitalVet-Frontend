@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useParams } from "react-router-dom";
+import API_BASE_URL from "../apiConfig";
 
 function EditCattle() {
   const [documentData, setDocumentData] = useState({});
@@ -15,7 +16,7 @@ function EditCattle() {
   useEffect(() => {
     const fetchCattle = async function() {
       try {
-        const response = await fetch(`/api/cattles/${cattleId}`, {
+        const response = await fetch(`${API_BASE_URL}/api/cattles/${cattleId}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -47,7 +48,7 @@ function EditCattle() {
     try {
       setLoading(true);
       console.log(updatedData);
-      const response = await fetch(`/api/cattles/${cattleId}`, {
+      const response = await fetch(`${API_BASE_URL}/api/cattles/${cattleId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

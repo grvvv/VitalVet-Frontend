@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useCattleContext } from "../hooks/useCattlesContext"
 import { ACTIONS } from "../context/CattleContext"
 import { useAuthContext } from "../hooks/useAuthContext"
+import API_BASE_URL from "../apiConfig"
 
 function CreateCattle() {
   const { dispatch } = useCattleContext()
@@ -25,7 +26,7 @@ function CreateCattle() {
 
     const cattle = {petName, age, breed, gender, identificationMark};
     try {
-      const response = await fetch('/api/cattles', {
+      const response = await fetch(`${API_BASE_URL}/api/cattles`, {
         method: 'POST',
         body: JSON.stringify(cattle),
         headers: {
