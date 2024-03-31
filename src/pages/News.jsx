@@ -27,20 +27,20 @@ const News = () => {
   }, []);
 
   return (
-    <div className="news-container"> {/* Apply class for styling */}
-      <h2 className="news-title">Latest News</h2> {/* Apply class for styling */}
+    <div className="news-container">
+      <h2 className="news-title">Latest News</h2> 
       {loading ? (
         <Loader />
       ) : (
-        <ul className="news-list"> {/* Apply class for styling */}
+        <ul className="news-list"> 
           {news.map((article, index) => (
-            <li key={index} className="news-item"> {/* Apply class for styling */}
-              <div className="news-content"> {/* Apply class for styling */}
-                {article.urlToImage && <img src={article.urlToImage} alt={article.title} className="news-image" />} {/* Check if image URL exists */}
-                <div className="news-text"> {/* Apply class for styling */}
-                  <h3 className="news-heading">{article.title}</h3> {/* Apply class for styling */}
-                  <p className="news-description">{article.description}</p> {/* Apply class for styling */}
-                  <a href={article.url} className="news-link" target="_blank" rel="noopener noreferrer"> {/* Apply class for styling */}
+            <li key={index} className="news-item"> 
+              <div className="news-content"> 
+                {article.urlToImage && <img src={article.urlToImage} alt={article.title} className="news-image" />} 
+                <div className="news-text"> 
+                  <h3 className="news-heading">{article.title}</h3> 
+                  <p className="news-description">{article.description}</p>
+                  <a href={article.url} className="news-link" target="_blank" rel="noopener noreferrer">
                     Read more
                   </a>
                 </div>

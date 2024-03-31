@@ -150,6 +150,7 @@ select:focus{
     width: auto;
     margin: 0px 15px;
     padding: 20px 30px;
+    font-size: 0.8em;
   }
   .custom-select select{
     margin: 10px 15px;
