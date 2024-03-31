@@ -52,8 +52,8 @@ const CattleCard = (props) => {
         <span>Age: <p>{entityData[0].age}</p></span>
         <span>Breed: <p>{entityData[0].breed}</p></span>
         <span>Gender: <p>{entityData[0].gender}</p></span>
-        {/* {entityData[0].identificationMark ? <span>Id: <p>{entityData[0].identificationMark}</p></span> : <></>} */}
         <span>Tag: <p>{entityData[0].tagNumber}</p></span>
+        {entityData[0].identificationMark ? <span>Id: <p>{entityData[0].identificationMark}</p></span> : <></>}
       </div>
       ) : (
         <Loader />

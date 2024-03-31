@@ -17,6 +17,10 @@
   grid-template-rows: max-content 30%;
   gap: 2%;
 }
+#user{
+  font-size: large;
+  font-weight: bold;
+}
 .cattles{
   grid-row-start: 1;
   grid-row-end: 3;

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "VitalVet",
+  "name": "Cattle Health Monitoring System",
   "icons": [
     {
       "src": "favicon.ico",

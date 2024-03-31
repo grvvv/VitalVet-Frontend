@@ -43,6 +43,10 @@ function Home() {
 
   return (
     <div className="home">
+      {
+        user && 
+        <span id="user">Welcome,<br/> {user.email}</span>
+      }
       <div className="cattles">
         { Array.isArray(cattles) && cattles.length > 0 ? 
         cattles.map((cattle) => {

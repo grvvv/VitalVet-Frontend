@@ -15,7 +15,7 @@ const Signup = () => {
     }
 
     return (
-        <div className="login-page" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', height: '100vh' }}>
+        <div className="signup-page" style={{ backgroundImage: `url(${backgroundImage})`,margin: '0px', backgroundSize: 'cover', height: '100vh' }}>
             <form className="signup" onSubmit={handleSubmit}>
                 <h2>Sign up</h2>
 

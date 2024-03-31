@@ -88,7 +88,7 @@ nav button{
 }
 
 /* auth forms */
-.login-page{
+.login-page, .signup-page{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,8 +114,20 @@ form.signup, form.login{
   #user-mail{
     display: none;
   }
+  header{
+    font-size: smaller;
+    padding: 10px 0px;
+  }
+  #logo-image{
+    margin-left: -20px;
+    width: 120px;
+  }
   .pages{
     margin-top: 20px;
     padding: 0;
+  }
+  form.login, form.signup{
+    margin-top: -200px;
+    font-size: small;
   }
 }
