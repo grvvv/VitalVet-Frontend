@@ -35,17 +35,6 @@
   margin: 20px 0;
   transition: transform 0.3s ease-in-out;
 }
-.Healthy{
-  background-color: #e3fff4;
-  border: solid #41a07a;
-}
-.Moderate{
-  background-color: rgb(255, 234, 195);
-  border: solid rgb(255, 195, 85);
-}
-.Weak{
-  background-color: #ffa5a5;
-}
 .details-component:hover {
     transform: scale(1.04);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

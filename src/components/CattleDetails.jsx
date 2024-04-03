@@ -74,15 +74,42 @@ export const CattleDetails = function({ cattle }){
       )}
       <div className="details-component">
         <Link className="link-component" to={`/health?cattleId=${cattle._id}&tagNumber=${cattle.tagNumber}`} style={{ textDecoration: 'none' }}>
-          <div className={`cattle-details ${cattle.healthStatus}`}>
+          <div className={`cattle-details`}>
             <h4>{cattle.petName}</h4>
             <p><strong>Breed: </strong>{cattle.breed}</p>
             <p><strong>Gender: </strong>{cattle.gender}</p>
+            {
+              cattle.healthStatus === 'Healthy' && 
+              <div>
+                <svg height="25" width="110" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="8" cx="10" cy="15" fill="limegreen"/>
+                  <text x="25" y="20" fill="black">Healthy</text>
+                </svg> 
+              </div>
+            }
+            {
+              cattle.healthStatus === 'Moderate' && 
+              <div>
+                <svg height="25" width="110" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="8" cx="10" cy="15" fill="gold"/>
+                  <text x="25" y="20" fill="black">Moderate</text>
+                </svg> 
+              </div>
+            }
+            {
+              cattle.healthStatus === 'Weak' && 
+              <div>
+                <svg height="25" width="110" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="8" cx="10" cy="15" fill="red"/>
+                  <text x="25" y="20" fill="black">Weak</text>
+                </svg> 
+              </div>
+            }
             {/* addSuffix adds _ days before to timestamp */}
             <p>{formatDistanceToNow(new Date(cattle.createdAt), { addSuffix: true })}</p>
           </div>
         </Link>
-        <div className={`buttons-component ${cattle.healthStatus}`}>
+        <div className={`buttons-component`}>
           <button className='material-symbols-outlined' 
             onClick={(event) => {         
             event.stopPropagation(); // Prevent the click event from propagating
