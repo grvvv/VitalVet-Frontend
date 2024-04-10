@@ -10,24 +10,9 @@
 .health-page{
   display: grid;
   grid-template-columns: 70% 25%;
-  grid-template-rows: 27% 20% 20%;
-  gap: 3%;
+  grid-template-rows: auto auto auto;
+  gap: 2%;
 }
-
-.data-charts{
-  position: relative; 
-  background: whitesmoke;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.data-charts div{
-  padding: 20px;
-  border-radius: 5px;
-}
-
 
 /* Gauges CSS */
 .data-gauges{
@@ -77,8 +62,8 @@
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   grid-row-start: 1;
-  grid-row-end: 3;
-  height: fit-content;
+  grid-row-end: 2;
+  height: min-content;
 }
 #name{
   color: var(--primary);
@@ -94,10 +79,65 @@
   display: inline;
 }
 .card-details span{
-  display: block;
-  
+  display: block; 
 }
 
+.data-charts{
+  position: relative; 
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.data-charts div{
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.custom-select{
+  grid-row-start: 2;
+  grid-row-end: 4;
+  margin-bottom: 10px;
+}
+
+.day-details{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background: whitesmoke;
+  padding: 20px 20px;
+  padding-top: 0px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  margin-top: 6%;
+}
+.physical-activity{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  background: whitesmoke;
+  padding: 20px 20px;
+  padding-top: 0px;
+  height: fit-content;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+.property{
+  text-align: left;
+}
+tr:first-child{
+  background-color: #dcfde9;
+}
 /* Select */
 select{
   width: max-content;
@@ -113,9 +153,6 @@ select{
 }
 select:focus{
   outline: none;
-}
-.custom-select{
-  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 950px){
@@ -158,6 +195,15 @@ select:focus{
   
   #current-cattle-id{
     font-size: 1.2em;
+  }
+
+  .physical-activity{
+    width: auto;
+    margin: 0px 15px;
+  }
+  .day-details{
+    width: auto;
+    margin: 0px 15px;
   }
 
   .data-charts{

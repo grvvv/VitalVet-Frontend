@@ -6,6 +6,8 @@ import CattleCard from '../components/CattleCard';
 import { useAuthContext } from "../hooks/useAuthContext";
 import Loader from '../components/alerts/Loader';
 import API_BASE_URL from '../apiConfig';
+import DayDetails from '../components/cards/DayDetails';
+
 
 function Health() {
   const location = useLocation();
@@ -113,7 +115,22 @@ function Health() {
         <div className='custom-select'>
           <Loader />
         </div>
-        
+      }
+      {
+        data ? 
+        <div className="day-details">
+          <DayDetails 
+          maxTemp={data.cattleHealth[data.cattleHealth.length - 1]?.maxTemp}
+          minTemp={data.cattleHealth[data.cattleHealth.length - 1]?.minTemp}
+          maxPulse={data.cattleHealth[data.cattleHealth.length - 1]?.maxPulse}
+          minPulse={data.cattleHealth[data.cattleHealth.length - 1]?.minPulse}
+          maxOxy={data.cattleHealth[data.cattleHealth.length - 1]?.maxOxy}
+          minOxy={data.cattleHealth[data.cattleHealth.length - 1]?.minOxy}
+          />
+        </div>:
+        <div className="day-details">
+          <Loader />
+        </div>
       }
       
 
