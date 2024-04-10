@@ -27,8 +27,6 @@ const DayDetails = (props) => {
           <td>{props.minOxy}</td>
         </tr>
       </table>
-      <hr />
-      <h2>Status</h2>
       <span></span>
     </div>
   )
